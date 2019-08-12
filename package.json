@@ -1,0 +1,17 @@
+{
+  "name": "remove-bg-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rmbg.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "base64-img": "^1.0.4",
+    "image-convert": "^0.1.33",
+    "image-to-base64": "^2.0.1",
+    "request": "^2.88.0"
+  }
+}
