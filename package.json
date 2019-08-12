@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "base64-img": "^1.0.4",
+    "cloudinary": "^1.14.0",
     "gif-to-apng": "^0.1.2",
     "image-convert": "^0.1.33",
     "image-to-base64": "^2.0.1",
