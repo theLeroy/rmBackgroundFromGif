@@ -13,15 +13,17 @@ fs.readdirSync(testFolder).forEach(file => {
     formData: {
       image_file: fs.createReadStream(''+ testFolder +'/'+ file + ''),
       size: 'auto',
+      // crop: 'true',
+      // crop_margin: '50%'
     },
     headers: {
-      'X-Api-Key': 'U9aW6buJceKqrkj9PTpvJiaa'
+      'X-Api-Key': 'GW8VZXKTaCWqy6KoVTo43ubL' //U9aW6buJceKqrkj9PTpvJiaa, pZqFjtibJb654EzdiZPd8ZfP
     },
     encoding: null
   }, function(error, response, body) {
     if(error) return console.error('Request failed:', error);
     if(response.statusCode != 200) return console.error('Error:', response.statusCode, body.toString('utf8'));
-    fs.writeFileSync("./output/"+file+".png", body);
+    fs.writeFileSync("./output/"+file+"", body);
   });
 
 });
