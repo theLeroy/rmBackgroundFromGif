@@ -12,20 +12,12 @@ fs.readdirSync(testFolder).forEach(file => {
   console.log("file found "+ file);
 
 
-  cloudinary.v2.uploader.upload(''+ testFolder +'/'+ file + '',
-  { public_id: file,
-    background_removal: "cloudinary_ai",
-    notification_url: "https://mysite.example.com/hooks" },
-  function(error, result){
-    console.log(result);
-    console.log(error);
+  // cloudinary.v2.uploader.upload(''+ testFolder +'/'+ file + '', {public_id: file},
+    // function(error, result) {console.log(result, error); });
 
-    // fs.writeFileSync("./output/"+file+"", result);
-  });
 
-  // Download to a directory and save with an another filename
 options = {
-  url: 'https://res.cloudinary.com/dlgctfcex/image/upload/v1565685557/'+file+'.png',
+  url: 'https://res.cloudinary.com/dlgctfcex/image/upload/e_bgremoval/v1565687037/'+file+'.png',
   dest: "./output/"+file+"",        // Save to /path/to/dest/photo.jpg
   done: function(err, filename, image) {
     if (err) {
